@@ -17,8 +17,8 @@ class Hangman:
 
 
     def random_choice_word(self):
-        print(f"seçilen kelime {len(self.word)} harfli meyve ")
-        print(f"{len(self.word)+2} hakkın var")
+        print(f"Selected word is a fruit with {len(self.word)} letters.")
+        print(f"you have {len(self.word)+2} chances to find it")
 
     def loops(self):
         for i in self.word:
@@ -47,7 +47,7 @@ class Hangman:
                     print("_",end="")
 
             if c == self.word:
-                print(" you win")
+                print("YOU WİN")
                 break
             b+=1
 
