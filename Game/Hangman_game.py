@@ -8,21 +8,21 @@ someWords = someWords.split()
 word = random.choice(someWords)
 
 class Hangman:
-    giriş = "---------adam asmaca oynuma hosgeldiniz---------"
-    print(giriş)
+    start = "---------welcome to my hangman game---------"
+    print(start)
 
 
     def __init__(self,word):
         self.word = word
 
 
-    def fonk(self):
+    def random_choice_word(self):
         print(f"seçilen kelime {len(self.word)} harfli meyve ")
         print(f"{len(self.word)+2} hakkın var")
 
     def loops(self):
         for i in self.word:
-            print("_", end="") #kelime sayısı kadar çizgiler
+            print("_", end="") 
 
         print()
         a = len(self.word) + 2
@@ -30,10 +30,10 @@ class Hangman:
         letterGuessed = ''
 
         while  b<a:
-            c = str(input(" kelime tahmin et:\n"))
+            c = str(input("Guess the word.:\n"))
             if c == self.word:
-                        print("you win")
-                        break
+                print("you win")
+                break
 
             if c in self.word:
                 k = self.word.count(c)
@@ -43,14 +43,12 @@ class Hangman:
             for char in self.word:
                 if char in letterGuessed:
                     print(char,end="")
-                    
                 else:
                     print("_",end="")
 
             if c == self.word:
                 print(" you win")
                 break
-
             b+=1
 
         else:
